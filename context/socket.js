@@ -8,18 +8,22 @@ export const useSocket = () => {
     return socket
 }
 
-export const SocketProvider = ({children}) => {
-    const [socket, setSocket] = useState(null);
-    useEffect(()=>{
-        const connection = io();
+export const SocketProvider = (props) => {
+  const { children } = props;
+  const [socket, setSocket] = useState(null);
+
+  useEffect(() => {
+    const connection = io();
     console.log("socket connection", connection)
     setSocket(connection);
-    },[])
-      socket?.on('connect_error', async (err) => {
+  }, []);
+
+  socket?.on('connect_error', async (err) => {
     console.log("Error establishing socket", err)
     await fetch('/api/socket')
   })
-    return (
+
+  return (
     <SocketContext.Provider value={socket}>{children}</SocketContext.Provider>
   );
 };

@@ -1,17 +1,17 @@
 .playerContainer {
   position: relative;
   overflow: hidden;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.25rem; /* mb-5 */
   height: 100%;
 }
 
 .active {
-  border-radius: 0.5rem;
+  border-radius: 0.5rem; /* rounded-lg */
 }
 
 .notActive {
-  border-radius: 0.375rem;
-  min-height: min-content;
+  border-radius: 0.375rem; /* rounded-md */
+  min-height: min-content; /* h-min */
   width: 200px;
   -webkit-box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.75);
@@ -19,14 +19,14 @@
 }
 
 .icon {
-  color: #fff;
+  color: #fff; /* text-white */
   position: absolute;
-  right: 0.5rem;
-  bottom: 0.5rem;
+  right: 0.5rem; /* right-2 */
+  bottom: 0.5rem; /* bottom-2 */
 }
 
 .user {
-  color: #fff;
+  color: #fff; /* text-white */
 }
 
 .notPlaying {
